@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Car Recommendation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-neubrutalism.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Toyota_logo_%28Red%29.svg/800px-Toyota_logo_%28Red%29.svg.png" alt="Toyota Logo">
+                <h1>Toyota Car Recommendation</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Form Section -->
+            <section class="input-section">
+                <div class="form-container">
+                    <h2><i class="fas fa-calculator"></i> Simulasi Pembelian Mobil</h2>
+                    <p class="subtitle">Masukkan informasi Anda untuk mendapatkan rekomendasi mobil yang sesuai</p>
+                    
+                    <form id="carRecommendationForm" class="form">
+                        <div class="form-group">
+                            <label for="budget">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Budget Maksimal (Rp)
+                            </label>
+                            <input type="text" id="budget" name="budget" placeholder="Contoh: 300000000" required>
+                            <span class="helper-text">Maksimal budget yang Anda miliki untuk membeli mobil</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="income">
+                                <i class="fas fa-wallet"></i>
+                                Penghasilan per Bulan (Rp)
+                            </label>
+                            <input type="text" id="income" name="income" placeholder="Contoh: 10000000" required>
+                            <span class="helper-text">Total penghasilan bulanan Anda</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="expenses">
+                                <i class="fas fa-receipt"></i>
+                                Pengeluaran/Tanggungan per Bulan (Rp)
+                            </label>
+                            <input type="text" id="expenses" name="expenses" placeholder="Contoh: 5000000" required>
+                            <span class="helper-text">Total pengeluaran rutin bulanan Anda</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="downPayment">
+                                <i class="fas fa-percentage"></i>
+                                Uang Muka (%)
+                            </label>
+                            <select id="downPayment" name="downPayment" required>
+                                <option value="">Pilih persentase uang muka</option>
+                                <option value="20">20% - Minimum</option>
+                                <option value="30">30% - Rekomendasi</option>
+                                <option value="40">40% - Optimal</option>
+                                <option value="50">50% - Terbaik</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tenure">
+                                <i class="fas fa-calendar-alt"></i>
+                                Tenor Cicilan
+                            </label>
+                            <select id="tenure" name="tenure" required>
+                                <option value="">Pilih tenor cicilan</option>
+                                <option value="12">1 Tahun (12 bulan)</option>
+                                <option value="24">2 Tahun (24 bulan)</option>
+                                <option value="36">3 Tahun (36 bulan)</option>
+                                <option value="48">4 Tahun (48 bulan)</option>
+                                <option value="60">5 Tahun (60 bulan)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-search"></i>
+                            Cari Mobil Rekomendasi
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2><i class="fas fa-car"></i> Rekomendasi Mobil Untuk Anda</h2>
+                <div class="financial-summary" id="financialSummary"></div>
+                
+                <!-- Search and Filter Section -->
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                    <div class="search-section">
+                        <div class="search-input-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="carSearch" placeholder="Cari mobil berdasarkan nama atau tipe..." class="search-input">
+                            <button id="clearSearch" class="clear-search-btn" style="display: none;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Tabs -->
+                    <div class="filter-section">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">
+                                <i class="fas fa-th-large"></i>
+                                Semua Mobil
+                                <span class="tab-count" id="countAll">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="100-200">
+                                <i class="fas fa-dollar-sign"></i>
+                                100-200 Juta
+                                <span class="tab-count" id="count100-200">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="200-300">
+                                <i class="fas fa-coins"></i>
+                                200-300 Juta
+                                <span class="tab-count" id="count200-300">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="300-500">
+                                <i class="fas fa-money-bill"></i>
+                                300-500 Juta
+                                <span class="tab-count" id="count300-500">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="500-1000">
+                                <i class="fas fa-money-bill-wave"></i>
+                                500 Juta - 1 M
+                                <span class="tab-count" id="count500-1000">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="1000+">
+                                <i class="fas fa-gem"></i>
+                                1 M+
+                                <span class="tab-count" id="count1000+">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Summary -->
+                    <div class="filter-summary" id="filterSummary">
+                        <span class="filter-text">Menampilkan <strong id="resultCount">0</strong> mobil</span>
+                        <button id="resetFilters" class="reset-filters-btn" style="display: none;">
+                            <i class="fas fa-undo"></i>
+                            Reset Filter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cars-grid" id="carsGrid"></div>
+            </section>
+
+            <!-- Car Detail Modal -->
+            <div id="carModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Toyota Astra Motor. Sistem Rekomendasi Pembelian Mobil.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

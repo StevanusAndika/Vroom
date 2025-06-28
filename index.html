@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VROOM - From Budget to Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-3.2.6.min.css">
+    <link rel="stylesheet" href="assets/css/front.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="https://via.placeholder.com/40x40" alt="VROOM Logo">
+                <h1>VROOM</h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#features" class="nav-link">Alasan Memilih VROOM</a>
+                <a href="#team" class="nav-link">Tim Kami</a>
+                <a href="#pricing" class="nav-link">Harga</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <a href="main.html" target="_blank"class="nav-link">Simulasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/70x70" alt="VROOM Logo">
+                <h1>VROOM</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>From Budget to Garage</h2>
+                    <p>"Dapatkan Mobil Impian Tanpa Bingung Hitung Biaya – VROOM Solusinya!"</p>
+                    <div class="hero-cta">
+                        <a href="#pricing" class="btn-primary">Lihat Harga </a>
+                        <a href="#features" class="btn-secondary">Pelajari Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="data:image/jpeg;base64,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" alt="Car Recommendation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Kenapa Memilih VROOM?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Hitung Sesuai Kemampuan Finansial Mu</h3>
+                    <p>Hitung Semua Biaya Sekaligus – DP, cicilan, asuransi, pajak, dan lebih banyak lagi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3> Bandingkan Berbagai Opsi</h3>
+                    <p>Temukan mobil terbaik sesuai budgetmu..</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3> Simulasi Kredit Akurat </h3>
+                    <p>Cek kemampuan finansialmu sebelum ke dealer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Tim Kami</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://avatars.githubusercontent.com/u/157090141?v=4" alt="Team Member" class="team-photo">
+                    <h3>RezaNanda</h3>
+                    <span class="position">CEO & Founder</span>
+                    <p>Visioner dengan pengalaman 15+ tahun di bidang teknologi otomotif dan pengembangan bisnis. Membawa misi untuk menyederhanakan proses pembelian mobil melalui inovasi digital.</p>
+                    <div class="team-social">
+                        <a href="https://github.com/NameRezananda"  target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://portfolio-black-eight-98.vercel.app/"  target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="mailto:rk231.ipwija@gmail.com"  target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/200x200" alt="Team Member" class="team-photo">
+                    <h3>Dhaffa Abdillah Hakim</h3>
+                    <span class="position">CTO</span>
+                    <p>Ahli teknologi dengan di sistem rekomendasi untuk aplikasi otomotif. Memastikan VROOM hadir dengan solusi cerdas dan terdepan..</p>
+                    <div class="team-social">
+                        <a href="https://github.com/dhaffaabdillah" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dhaffaabdillah/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="#"  target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://avatars.githubusercontent.com/u/84663886?s=400&u=8b6874044e2944031ab2588d2cc743adddc88cdb&v=4" alt="Team Member" class="team-photo">
+                    <h3>Stevanus Andika Galih Setiawan </h3>
+                    <span class="position">Head of Product</span>
+                    <p>Spesialis pengembangan produk dengan pemahaman mendalam tentang tren pasar otomotif. Menghubungkan kebutuhan pengguna dengan fitur terbaik VROOM.</p>
+                    <div class="team-social">
+                        <a href="https://github.com/StevanusAndika/"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/stevanus-andika-galih-setiawan-9127b8257" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href=" mailto:stevcomp58@gmail.com"><i class="fas fa-envelope"  target="_blank"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <h2 class="section-title">Masalah Yang Bisa Kami Selesaikan</h2>
+            <div class="ps-container">
+                <div class="problem-box ps-box">
+                    <h3>Tantangan</h3>
+                    <p>Membeli mobil baru adalah proses yang rumit dan membingungkan. Kebanyakan pembeli kesulitan dalam:</p>
+                    <ul>
+                        <li>Memahami total biaya kepemilikan di luar harga beli</li>
+                        <li>Menemukan mobil yang benar-benar sesuai dengan anggaran mereka</li>
+                        <li>Membandingkan opsi pembiayaan dan syarat pinjaman</li>
+                        <li>Memperkirakan biaya asuransi dan perawatan</li>
+                        <li>Menghadapi banyaknya pilihan yang tersedia</li>
+                    </ul>
+                </div>
+                <div class="solution-box ps-box">
+                    <h3>Solusi Kami</h3>
+                    <p>VROOM mempermudah pembelian mobil dengan:</p>
+                    <ul>
+                        <li>Kalkulator biaya komprehensif</li>
+                        <li>Personalized vehicle recommendations</li>
+                        <li>Rekomendasi kendaraan yang dipersonalisasi</li>
+                        <li>Informasi harga yang transparan</li>
+                        <li>Saran pembelian dari ahli</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Harga</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">Rp7,5 juta <span>/bulan</span></div>
+                    <ul class="pricing-features">
+                        <li>Instalasi & Setup – Siap digunakan langsung </li>
+                        <li>Domain Kustom – Branding profesional</li>
+                        <li> 5 Perbandingan Tersimpan – Bandingkan pilihan mobil favorit Anda</li>
+                        <li>Dukungan Chat – Bantuan responsif via WhatsApp</li>
+                        <li>Cocok untuk dealer kecil atau individu yang ingin mulai eksplorasi</li>
+                    </ul>
+                    <a href="https://wa.me/6285172386866" target="_blank">
+                        <button class="pricing-btn">Hubungi Customer Services Kami</button>
+                      </a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Pro</h3>
+                    <div class="price">Rp85 juta<span>/tahun</span></div>
+                    <ul class="pricing-features">
+                        <li>Semua Fitur Basic +</li>
+                        <li>Rekomendasi Lanjutan – Temukan mobil terbaik berdasarkan kebutuhan spesifik Anda</li>
+                        <li> Analisis Biaya Mendalam – Breakdown DP, cicilan, asuransi, & pajak</li>
+                        <li> Optimisasi Pembiayaan – Solusi kredit terbaik dengan bunga kompetitif</li>
+                        <li> Dukungan Prioritas – Tim khusus siap membantu Anda 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/6285172386866" target="_blank">
+                        <button class="pricing-btn">Hubungi Customer Services Kami</button>
+                      </a>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Apabila ada pertanyaan</h3> Silakan hubungi saya melalui formulir/layanan di bawah ini. Tim Kami akan merespons secepat mungkin.
+                    <form action="https://formspree.io/f/xjkrjjeo" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126890.69989706791!2d106.82460048906249!3d-6.350737189694579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699497657003d7%3A0xeff7654721430918!2sUNIVERSITAS%20IPWIJA!5e0!3m2!1sid!2sid!4v1751118823814!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">VROOM</div>
+            <div class="footer-tagline">From Budget to Garage</div>
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Beranda</a>
+                <a href="#features" class="footer-link">Alasan Memilih Vroom</a>
+                <a href="#team" class="footer-link">Tim Kami</a>
+                <a href="#pricing" class="footer-link">Harga</a>
+                <a href="#contact" class="footer-link">Kontak</a>
+                <a href="main.html"  class="footer-link">Simulasi</a>
+                
+                
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright" id="copyright-text"></div>
+        </div>
+    </footer>
+ <!-- Notiflix JS -->
+ <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-3.2.6.min.js"></script>
+ <script src="assets/js/index.js">
+  
+</script>
+    
+   
+</body>
+</html>
