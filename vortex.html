@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORTEX - Developer VROOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="assets/css/front.css">
+    <link rel="icon" href="assets/images/Vortex_logo.svg">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #fff; color: #222; }
+        .vortex-header { display: flex; align-items: center; gap: 20px; margin-bottom: 2rem; }
+        .vortex-logo { width: 100px; height: auto; }
+        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+        .project-card { border: 2px solid #fbbf24; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; background: #fffbe6; }
+        .project-links a { margin-right: 1rem; color: #2563eb; font-weight: 600; text-decoration: underline; }
+        .team-grid { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .team-card { background: #f3f4f6; border-radius: 1rem; padding: 1rem; width: 250px; text-align: center; }
+        .team-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; }
+        .footer { background: #fbbf24; color: #222; padding: 1.5rem 0; text-align: center; margin-top: 3rem; }
+        @media (max-width: 600px) { .vortex-header { flex-direction: column; } .team-grid { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container" style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="navbar-logo vortex-header" style="display:flex;align-items:center;justify-content:flex-start;">
+                <img src="assets/images/Vortex_logo.svg" alt="Vortex Logo" class="vortex-logo" style="box-shadow:none;filter:none;">
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#project" class="nav-link">Project</a>
+                <a href="#team" class="nav-link">Tim</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" style="background:#fffbe6;padding:3rem 0 2rem 0;">
+        <div class="container" style="display:flex;flex-direction:row;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;">
+            <!-- Kiri: Logo dan Teks -->
+            <div style="flex:1;min-width:270px;max-width:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+                <img src="assets/images/Vortex_logo.svg" alt="Vortex Logo" style="width:300px;max-width:95vw;margin-bottom:1.5rem;box-shadow:none;filter:none;display:block;">
+                
+                <p style="font-size:1.15rem;max-width:400px;">Kami adalah perusahaan pengembang teknologi yang berfokus pada inovasi digital di bidang otomotif dan keuangan. Misi kami adalah menyederhanakan proses kompleks menjadi solusi yang mudah, transparan, dan memberdayakan pengguna.</p>
+            </div>
+            <!-- Kanan: Gambar PNG -->
+            <div style="flex:1;min-width:250px;max-width:400px;display:flex;align-items:center;justify-content:center;">
+                <img src="assets/images/Man_computer.svg" alt="Vortex Automotive" style="width:100%;max-width:350px;height:auto;border-radius:1rem;box-shadow:none;">
+            </div>
+        </div>
+    </section>
+    <header class="container" id="about" style="margin-top:2rem;">
+        <div class="section-title">Tentang VORTEX</div>
+        <div class="vortex-card" style="max-width:700px;margin:auto;">
+            <p style="font-size:1.2rem;">VORTEX adalah perusahaan pengembang teknologi digital yang berfokus pada solusi inovatif untuk otomotif dan keuangan. Kami percaya bahwa teknologi dapat menyederhanakan proses kompleks dan memberikan nilai tambah bagi masyarakat. <br><br><b>Visi:</b> Menjadi pelopor solusi digital otomotif di Indonesia.<br><b>Misi:</b> Mengembangkan produk yang memudahkan, transparan, dan memberdayakan pengguna dalam mengambil keputusan finansial dan otomotif.</p>
+        </div>
+    </header>
+    <main class="container">
+        <section id="project" style="margin-top:3rem;">
+            <div class="section-title">Project Pertama Kami: <span style="color:#fbbf24;">VROOM</span></div>
+            <div class="vortex-card">
+                <h2 style="font-size:1.5rem;font-weight:700;">VROOM - From Budget to Garage</h2>
+                <p style="margin:1rem 0;">VROOM adalah platform simulasi dan rekomendasi pembelian mobil yang membantu customer menentukan mobil impian tanpa bingung hitung biaya. Semua biaya, mulai dari DP, cicilan, asuransi, hingga pajak, dihitung otomatis dan transparan.</p>
+                <div class="project-links">
+                    <a href="index.html" target="_blank">Landing Page VROOM</a>
+                    <a href="main.html" target="_blank">Simulasi & Rekomendasi</a>
+                    <a href="toyota.html" target="_blank">Daftar Mobil Toyota</a>
+                </div>
+            </div>
+        </section>
+        <section id="team" style="margin-top:3rem;">
+            <div class="section-title">Tim Kami</div>
+            <div class="vortex-card">
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="https://avatars.githubusercontent.com/u/157090141?v=4" alt="RezaNanda" class="team-photo">
+                        <h3>RezaNanda</h3>
+                        <span class="position">CEO & Founder</span>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/200x200" alt="Dhaffa Abdillah Hakim" class="team-photo">
+                        <h3>Dhaffa Abdillah Hakim</h3>
+                        <span class="position">CTO</span>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://avatars.githubusercontent.com/u/84663886?s=400&u=8b6874044e2944031ab2588d2cc743adddc88cdb&v=4" alt="Stevanus Andika Galih Setiawan" class="team-photo">
+                        <h3>Stevanus Andika Galih Setiawan</h3>
+                        <span class="position">Head of Product</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" style="margin-top:3rem;">
+            <div class="section-title">Kontak</div>
+            <div class="vortex-card" style="max-width:500px;margin:auto;">
+                <p>Hubungi kami untuk kolaborasi, konsultasi, atau pertanyaan lebih lanjut:</p>
+                <ul style="font-size:1.1rem;line-height:2;">
+                    <li>Email: <a href="mailto:info@vortex.co.id">info@vortex.co.id</a></li>
+                    <li>WhatsApp: <a href="https://wa.me/6287748115931" target="_blank">+62 877-4811-5931</a></li>
+                    <li>Alamat: Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>VORTEX &copy; 2025 | Developer of <b>VROOM</b> | From Budget to Garage</div>
+    </footer>
+</body>
+</html>

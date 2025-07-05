@@ -1110,3 +1110,26 @@
         /* background: #fff; */
         overflow: hidden;
     }
+
+    /* VORTEX CARD STYLE */
+    .vortex-card {
+        background: #fff;
+        border: 6px solid #1a1a1a;
+        box-shadow: 12px 12px 0px #3b82f6;
+        border-radius: 1.5rem;
+        padding: 2.5rem 2rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        transform: rotate(1deg);
+        transition: all 0.3s cubic-bezier(.4,2,.6,1);
+    }
+    .vortex-card:hover {
+        box-shadow: 18px 18px 0px #fbbf24;
+        transform: rotate(1deg) translateY(-6px) translateX(-6px) scale(1.02);
+    }
+    @media (max-width: 600px) {
+        .vortex-card {
+            padding: 1.2rem 0.7rem;
+            border-radius: 1rem;
+        }
+    }
