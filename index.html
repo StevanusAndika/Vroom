@@ -1,284 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VROOM - From Budget to Garage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-3.2.6.min.css">
-    <link rel="stylesheet" href="assets/css/front.css">
-    <link rel="icon" href="assets/images/Vroom_logo.svg">
+    <title>Toyota Car Recommendation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-neubrutalism.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="80" preserveAspectRatio="xMidYMid meet" version="1.2"><g id="1712908ffc"><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#fbbf24;stroke-opacity:1;stroke-miterlimit:4;" d="M 24.001011 24.001908 L 255.091773 24.001908 " transform="matrix(0.74979,0,0,0.74979,134.180064,94.386423)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;" d="M 24.00101 24.001907 L 255.091772 24.001907 " transform="matrix(0.74979,0,0,0.74979,122.180065,82.386424)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#fbbf24;stroke-opacity:1;stroke-miterlimit:4;" d="M 23.99769 23.999629 L 348.976878 23.999629 " transform="matrix(0.75,-0.000000000000000093,0.000000000000000093,0.75,42.689234,148.613561)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;" d="M 23.999998 23.999628 L 348.973978 23.999628 " transform="matrix(0.75,-0.000000000000000093,0.000000000000000093,0.75,31.500002,136.613561)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#fbbf24;stroke-opacity:1;stroke-miterlimit:4;" d="M 23.99741 24.002463 L 261.299079 24.002463 " transform="matrix(0.749261,-0.000000000000000279,0.000000000000000279,0.749261,88.742343,202.613557)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;" d="M 23.997613 24.002462 L 261.294069 24.002462 " transform="matrix(0.749261,-0.000000000000000279,0.000000000000000279,0.749261,78.589847,190.613558)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#fbbf24;stroke-opacity:1;stroke-miterlimit:4;" d="M 24.000097 24.001103 L 154.372161 24.001103 " transform="matrix(0.748489,0,0,0.748489,149.688539,256.613568)"/><path style="fill:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;" d="M 24.000959 24.001121 L 154.373022 24.001121 " transform="matrix(0.748489,0.000000000000000239,-0.000000000000000239,0.748489,141.250394,244.613554)"/></g></svg>
-                <h1>VROOM</h1>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link">Beranda</a>
-                <a href="#features" class="nav-link">Value</a>
-                <a href="#team" class="nav-link">Tim Kami</a>
-                <a href="#pricing" class="nav-link">Harga</a>
-                <a href="#contact" class="nav-link">Kontak</a>
-                <a href="main.html" target="_blank"class="nav-link">Simulasi</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="header" id="home">
-        <div class="container">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
             <div class="logo">
-                <img src="assets/images/Vroom_logo.svg" alt="VROOM Logo">
-                <h1>VROOM</h1>
+                <img src="https://www.toyota.astra.co.id/sites/all/themes/toyota/logo.svg" alt="Toyota Logo">
+                <h1>Toyota Car Recommendation</h1>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h2>From Budget to Garage</h2>
-                    <p>"Membantu Customer Menentukan Mobil Impian Tanpa Bingung Hitung Biaya – VROOM Solusinya!"</p>
-                    <div class="hero-cta">
-                        <a href="#pricing" class="btn-primary">Lihat Harga </a>
-                        <a href="#features" class="btn-secondary">Pelajari Selengkapnya</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/images/Car-hero.png" alt="Car Hero" class="car-hero-half">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Kenapa Memilih VROOM?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3>Hitung Cepat Otomatis Sesuai Kemampuan Finansial Customer</h3>
-                    <p>Hitung Semua Biaya Sekaligus – DP, cicilan, asuransi, pajak, dan lebih banyak lagi.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-car-side"></i>
-                    </div>
-                    <h3> Bandingkan Berbagai Opsi</h3>
-                    <p>Temukan mobil terbaik sesuai budget..</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3> Simulasi Kredit Akurat </h3>
-                    <p>Cek kemampuan finansialmu sebelum ke dealer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <div class="container">
-            <h2 class="section-title">Tim Kami</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <img src="https://avatars.githubusercontent.com/u/157090141?v=4" alt="Team Member" class="team-photo">
-                    <h3>RezaNanda</h3>
-                    <span class="position">CEO & Founder</span>
-                    <p>Visioner dengan pengalaman 15+ tahun di bidang teknologi otomotif dan pengembangan bisnis. Membawa misi untuk menyederhanakan proses pembelian mobil melalui inovasi digital.</p>
-                    <div class="team-social">
-                        <a href="https://github.com/NameRezananda"  target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://portfolio-black-eight-98.vercel.app/"  target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="mailto:rk231.ipwija@gmail.com"  target="_blank"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <img src="https://via.placeholder.com/200x200" alt="Team Member" class="team-photo">
-                    <h3>Dhaffa Abdillah Hakim</h3>
-                    <span class="position">CTO</span>
-                    <p>Ahli teknologi dengan di sistem rekomendasi untuk aplikasi otomotif. Memastikan VROOM hadir dengan solusi cerdas dan terdepan..</p>
-                    <div class="team-social">
-                        <a href="https://github.com/dhaffaabdillah" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/dhaffaabdillah/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="#"  target="_blank"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <img src="https://avatars.githubusercontent.com/u/84663886?s=400&u=8b6874044e2944031ab2588d2cc743adddc88cdb&v=4" alt="Team Member" class="team-photo">
-                    <h3>Stevanus Andika Galih Setiawan </h3>
-                    <span class="position">Head of Product</span>
-                    <p>Spesialis pengembangan produk dengan pemahaman mendalam tentang tren pasar otomotif. Menghubungkan kebutuhan pengguna dengan fitur terbaik VROOM.</p>
-                    <div class="team-social">
-                        <a href="https://github.com/StevanusAndika/"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/stevanus-andika-galih-setiawan-9127b8257" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href=" mailto:stevcomp58@gmail.com"><i class="fas fa-envelope"  target="_blank"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Solution Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <h2 class="section-title">Masalah Yang Bisa Kami Selesaikan</h2>
-            <div class="ps-container">
-                <div class="problem-box ps-box">
-                    <h3>Tantangan</h3>
-                    <p>Membeli mobil baru adalah proses yang rumit dan membingungkan. Kebanyakan pembeli kesulitan dalam:</p>
-                    <ul>
-                        <li>Memahami total biaya kepemilikan di luar harga beli</li>
-                        <li>Menemukan mobil yang benar-benar sesuai dengan anggaran mereka</li>
-                        <li>Membandingkan opsi pembiayaan dan syarat pinjaman</li>
-                        <li>Memperkirakan biaya asuransi dan perawatan</li>
-                        <li>Menghadapi banyaknya pilihan yang tersedia</li>
-                    </ul>
-                </div>
-                <div class="solution-box ps-box">
-                    <h3>Solusi Kami</h3>
-                    <p>VROOM mempermudah pembelian mobil dengan:</p>
-                    <ul>
-                        <li>Kalkulator biaya komprehensif</li>
-                        <li>Personalized vehicle recommendations</li>
-                        <li>Rekomendasi kendaraan yang dipersonalisasi</li>
-                        <li>Informasi harga yang transparan</li>
-                        <li>Saran pembelian dari ahli</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Harga</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Basic</h3>
-                    <div class="price">Rp7,5 juta <span>/bulan</span></div>
-                    <ul class="pricing-features">
-                        <li>Instalasi & Setup – Siap digunakan langsung </li>
-                        <li>Domain Kustom – Branding profesional</li>
-                        <li> 5 Perbandingan Tersimpan – Bandingkan pilihan mobil favorit Anda</li>
-                        <li>Dukungan Chat – Bantuan responsif via WhatsApp</li>
-                        <li>Cocok untuk dealer kecil atau individu yang ingin mulai eksplorasi</li>
-                    </ul>
-                    <a href="https://wa.me/6285172386866" target="_blank">
-                        <button class="pricing-btn">Hubungi Customer Services Kami</button>
-                      </a>
-                </div>
-                <div class="pricing-card popular">
-                    <h3>Pro</h3>
-                    <div class="price">Rp85 juta<span>/tahun</span></div>
-                    <ul class="pricing-features">
-                        <li>Semua Fitur Basic +</li>
-                        <li>Rekomendasi Lanjutan – Temukan mobil terbaik berdasarkan kebutuhan spesifik Anda</li>
-                        <li> Analisis Biaya Mendalam – Breakdown DP, cicilan, asuransi, & pajak</li>
-                        <li> Optimisasi Pembiayaan – Solusi kredit terbaik dengan bunga kompetitif</li>
-                        <li> Dukungan Prioritas – Tim khusus siap membantu Anda 24/7</li>
-                    </ul>
-                    <a href="https://wa.me/6285172386866" target="_blank">
-                        <button class="pricing-btn">Hubungi Customer Services Kami</button>
-                      </a>
-                </div>
-              
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <div class="contact-container">
-                <div class="contact-form">
-                    <h3>Kontak Kami</h3> Silakan hubungi kami melalui formulir/layanan di bawah ini. Tim Kami akan merespons secepat mungkin.
-                    <form action="https://formspree.io/f/xjkrjjeo" method="POST" id="contactForm">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Form Section -->
+            <section class="input-section">
+                <div class="form-container">
+                    <h2><i class="fas fa-calculator"></i> Simulasi Pembelian Mobil</h2>
+                    <p class="subtitle">Masukkan informasi Anda untuk mendapatkan rekomendasi mobil yang sesuai</p>
+                    
+                    <form id="carRecommendationForm" class="form">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="budget">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Budget Maksimal (Rp)
+                            </label>
+                            <input type="text" id="budget" name="budget" placeholder="Contoh: 300000000" required>
+                            <span class="helper-text">Maksimal budget yang Anda miliki untuk membeli mobil</span>
                         </div>
+
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="income">
+                                <i class="fas fa-wallet"></i>
+                                Penghasilan per Bulan (Rp)
+                            </label>
+                            <input type="text" id="income" name="income" placeholder="Contoh: 10000000" required>
+                            <span class="helper-text">Total penghasilan bulanan Anda</span>
                         </div>
+
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="expenses">
+                                <i class="fas fa-receipt"></i>
+                                Pengeluaran/Tanggungan per Bulan (Rp)
+                            </label>
+                            <input type="text" id="expenses" name="expenses" placeholder="Contoh: 5000000" required>
+                            <span class="helper-text">Total pengeluaran rutin bulanan Anda</span>
                         </div>
+
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
+                            <label for="downPayment">
+                                <i class="fas fa-percentage"></i>
+                                Uang Muka (%)
+                            </label>
+                            <select id="downPayment" name="downPayment" required>
+                                <option value="">Pilih persentase uang muka</option>
+                                <option value="20">20% - Minimum</option>
+                                <option value="30">30% - Rekomendasi</option>
+                                <option value="40">40% - Optimal</option>
+                                <option value="50">50% - Terbaik</option>
+                            </select>
                         </div>
-                        <button type="button" class="submit-btn" id="wa-submit">Kirim Pesan</button>
+
+                        <div class="form-group">
+                            <label for="tenure">
+                                <i class="fas fa-calendar-alt"></i>
+                                Tenor Cicilan
+                            </label>
+                            <select id="tenure" name="tenure" required>
+                                <option value="">Pilih tenor cicilan</option>
+                                <option value="12">1 Tahun (12 bulan)</option>
+                                <option value="24">2 Tahun (24 bulan)</option>
+                                <option value="36">3 Tahun (36 bulan)</option>
+                                <option value="48">4 Tahun (48 bulan)</option>
+                                <option value="60">5 Tahun (60 bulan)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-search"></i>
+                            Cari Mobil Rekomendasi
+                        </button>
                     </form>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126890.69989706791!2d106.82460048906249!3d-6.350737189694579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699497657003d7%3A0xeff7654721430918!2sUNIVERSITAS%20IPWIJA!5e0!3m2!1sid!2sid!4v1751118823814!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2><i class="fas fa-car"></i> Rekomendasi Mobil Untuk Anda</h2>
+                <div class="financial-summary" id="financialSummary"></div>
+                
+                <!-- Search and Filter Section -->
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                    <div class="search-section">
+                        <div class="search-input-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="carSearch" placeholder="Cari mobil berdasarkan nama atau tipe..." class="search-input">
+                            <button id="clearSearch" class="clear-search-btn" style="display: none;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Tabs -->
+                    <div class="filter-section">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">
+                                <i class="fas fa-th-large"></i>
+                                Semua Mobil
+                                <span class="tab-count" id="countAll">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="100-200">
+                                <i class="fas fa-dollar-sign"></i>
+                                100-200 Juta
+                                <span class="tab-count" id="count100-200">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="200-300">
+                                <i class="fas fa-coins"></i>
+                                200-300 Juta
+                                <span class="tab-count" id="count200-300">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="300-500">
+                                <i class="fas fa-money-bill"></i>
+                                300-500 Juta
+                                <span class="tab-count" id="count300-500">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="500-1000">
+                                <i class="fas fa-money-bill-wave"></i>
+                                500 Juta - 1 M
+                                <span class="tab-count" id="count500-1000">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="1000+">
+                                <i class="fas fa-gem"></i>
+                                1 M+
+                                <span class="tab-count" id="count1000+">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Summary -->
+                    <div class="filter-summary" id="filterSummary">
+                        <span class="filter-text">Menampilkan <strong id="resultCount">0</strong> mobil</span>
+                        <button id="resetFilters" class="reset-filters-btn" style="display: none;">
+                            <i class="fas fa-undo"></i>
+                            Reset Filter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cars-grid" id="carsGrid"></div>
+            </section>
+
+            <!-- Car Detail Modal -->
+            <div id="carModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modalContent"></div>
                 </div>
             </div>
-        </div>
-    </section>
-    <script>
-    document.getElementById('wa-submit').addEventListener('click', function() {
-        var name = document.getElementById('name').value.toLowerCase();
-        var email = document.getElementById('email').value.toLowerCase();
-        var subject = document.getElementById('subject').value.toLowerCase();
-        var message = document.getElementById('message').value.toLowerCase();
-        // Ganti dengan nomor WhatsApp tujuan (format: 628xxxxxxxxxx)
-        var phone = '6287748115931';
-        var text = `Halo Vroom, nama saya ${name}\nemail: ${email}\nsubyek: ${subject}\npesan: ${message}\n\n Saya ingin berkonsultasi tentang Vroom`;
-        var url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-        window.open(url, '_blank');
-    });
-    </script>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-logo">VROOM</div>
-            <div class="footer-tagline">From Budget to Garage</div>
-            <div class="footer-links">
-                <a href="#home" class="footer-link">Beranda</a>
-                <a href="#features" class="footer-link">Value</a>
-                <a href="#team" class="footer-link">Tim Kami</a>
-                <a href="#pricing" class="footer-link">Harga</a>
-                <a href="#contact" class="footer-link">Kontak</a>
-                <a href="main.html"  class="footer-link">Simulasi</a>
-                
-                
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="copyright" id="copyright-text"></div>
-        </div>
-    </footer>
- <!-- Notiflix JS -->
- <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-3.2.6.min.js"></script>
- <script src="assets/js/index.js">
-  
-</script>
-    
-   
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Toyota Astra Motor. Sistem Rekomendasi Pembelian Mobil.</p>
+        </footer>
+    </div>
+
+    <!-- Load Toyota data first, then main script -->
+    <script src="toyota-data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
